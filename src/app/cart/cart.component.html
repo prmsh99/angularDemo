@@ -1,0 +1,13 @@
+<h1>Your Cart Details:</h1>
+<div class="myContainer">
+  <div *ngFor="let item of items">
+    <div class="cartDiv">
+      <img src={{item.url}} class="cart-item-img" alt="...">
+      <h5 class="cart-title">{{item.name}}</h5>
+      <p class="cart-price">{{item.prize | currency}}</p>
+    </div>
+  </div>
+  <div>Total: {{calculateTotal() | currency}}</div>
+</div>
+
+<a [routerLink]="['/food']" class="btn btn-warning" routerLinkActive="router-link-active">Continue Shopping</a>

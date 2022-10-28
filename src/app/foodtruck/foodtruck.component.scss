@@ -1,0 +1,17 @@
+.myCard {
+  margin: 0.5rem;
+  &.active {
+    background-color: green;
+  }
+}
+.myHeader {
+  min-height: 80px;
+  border-bottom: 1px solid #ccc;
+  .btn {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}
+.myContainer {
+  margin-top: 1rem;
+}

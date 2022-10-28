@@ -1,0 +1,20 @@
+<div class="myHeader text-end align-middle">
+  <a [routerLink]="['/cart']" class="btn btn-warning" routerLinkActive="router-link-active">Cart({{totalCount}})</a>
+</div>
+<div class="container text-center myContainer">
+  <select class="form-select" aria-label="Default select example" (change)="onCategoryUpdate($event)">
+    <option selected>All Categories</option>
+    <option *ngFor="let category of categories">{{category}}</option>
+  </select>
+  <div class="row">
+    <div *ngFor="let item of data.items" class="card myCard" [ngClass]="item.added?'active':''" style="width: 18rem;">
+      <img src={{item.url}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">Price: {{item.prize | currency}}</p>
+        <a *ngIf="!item.added" href="#" class="btn btn-primary" (click)="addToCart(item)">Add to Cart</a>
+        <a *ngIf="item.added" href="#" class="btn btn-danger" (click)="removeFromCart(item)">Remove From Cart</a>
+      </div>
+    </div>
+  </div>
+</div>

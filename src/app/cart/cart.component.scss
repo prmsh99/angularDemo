@@ -1,0 +1,18 @@
+.cartDiv {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  .cart-item-img {
+    height: 250px;
+    width: 250px;
+  }
+  .cart-title, .cart-price {
+    line-height: 15rem;
+    margin-left: 4rem;
+  }
+  .cart-title {
+    min-width: 350px;
+  }
+}
+h1 {
+  color: green;
+}
